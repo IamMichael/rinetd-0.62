@@ -8,6 +8,9 @@ if [[ $UID -ne 0 ]]; then
    exit 1
 fi
 
+setenforce 0
+sed -i 's/^SELINUX=.*/SELINUX=permissive/g' /etc/selinux/config
+
 cp -r rinetd  /usr/local
 cp rinetd.service /etc/systemd/system
 
