@@ -2,6 +2,9 @@
 rinetd install script
 
 ```
+#############################
+install
+#############################
 Execute install script as root
 # sh install_rinetd.sh
 
@@ -10,4 +13,11 @@ Configure rinetd
 
 Restart rinetd
 # systemctl restart rinetd.service
+
+
+#########################
+unisntall
+#########################
+# systemctl stop rinetd.service
+# rm -rf /usr/local/rinetd
 ```
