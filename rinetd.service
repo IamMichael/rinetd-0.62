@@ -1,0 +1,13 @@
+[Unit]
+Description=Rinetd Daemon
+After=network.service
+Wants=network.service
+
+[Service]
+Type=simple
+PIDFile=/var/run/rinetd.pid
+ExecStart=/usr/local/rinetd/sbin/rinetd -c /usr/local/rinetd/etc/rinetd.conf 
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
